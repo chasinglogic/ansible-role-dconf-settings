@@ -1,0 +1,9 @@
+galaxy_info:
+  author: Mathew Robinson
+  description: Configure dconf settings for GNOME and other apps using gsettings
+  license: BSD-3-Clause
+  min_ansible_version: 2.9
+  galaxy_tags:
+    - dconf
+    - settings
+    - gnome
