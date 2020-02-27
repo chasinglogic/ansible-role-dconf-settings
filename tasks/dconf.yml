@@ -1,0 +1,5 @@
+---
+- name: "{{ item.name | default('Setting ' + item.key + ' to ' + item.value) }}"
+  dconf:
+    key: "{{ item.key }}"
+    value: "{{ item.value | string }}"

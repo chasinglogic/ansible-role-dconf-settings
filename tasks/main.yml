@@ -1,0 +1,20 @@
+---
+
+- name: Install OS package pre-requisites
+  become: true
+  become_user: root
+  package:
+    name:
+      - dconf-cli
+      - dbus
+  when: dconf_settings | bool
+
+- name: Install psutil
+  become: true
+  become_user: root
+  pip:
+    name: psutil
+  when: dconf_settings | bool
+
+- include_tasks: dconf.yml
+  loop: "{{ dconf_settings }}"
