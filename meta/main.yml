@@ -1,5 +1,5 @@
 galaxy_info:
-  name: dconf_settings
+  role_name: dconf_settings
   author: Mathew Robinson
   description: Configure dconf settings for GNOME and other apps using gsettings
   license: BSD-3-Clause
