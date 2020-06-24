@@ -1,5 +1,4 @@
 ---
-
 - name: Install OS package pre-requisites
   become: true
   become_user: root
@@ -7,13 +6,7 @@
     name:
       - dconf-cli
       - dbus
-  when: dconf_settings | bool
-
-- name: Install psutil
-  become: true
-  become_user: root
-  pip:
-    name: psutil
+      - python3-psutil
   when: dconf_settings | bool
 
 - include_tasks: dconf.yml
